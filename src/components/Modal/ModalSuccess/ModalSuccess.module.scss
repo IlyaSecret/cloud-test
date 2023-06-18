@@ -1,0 +1,34 @@
+.modal {
+  &__success {
+    display: grid;
+
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+      "title"
+      "success"
+      "button";
+    row-gap: 22px;
+    justify-items: center;
+  }
+
+  &__title {
+    grid-area: title;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: hsla(0, 0%, 20%, 1);
+  }
+
+  &__successIcon {
+    grid-area: success;
+    margin: 26px auto;
+    border-radius: 50%;
+    border: hsla(158, 94%, 35%, 0.15) solid 20px;
+  }
+
+  &__button {
+    grid-area: button;
+  }
+
+}

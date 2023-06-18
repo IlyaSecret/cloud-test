@@ -1,0 +1,32 @@
+.radio {
+  gap: 4px;
+
+  &__itemContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 4rem;
+    margin: 2px;
+  }
+
+  &__item {
+    position: relative;
+    left: 1.5px;
+    appearance: none;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.24);
+    width: 1.6rem;
+    height: 1.6rem;
+    display: grid;
+    grid-template-columns: 1.6rem auto;
+
+    &:checked {
+      gap: 0;
+      border: 0.35rem solid #FFF;
+      background: hsla(0, 0%, 80%, 1);
+    }
+  }
+}

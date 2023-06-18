@@ -1,0 +1,37 @@
+@use "./../../utils/_inputStyles" as mix;
+
+.advantages {
+  @include mix.inputStyles;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-areas: "input delete";
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__add {
+    margin-top: 8px;
+    width: 44px;
+    height: 44px;
+    padding: 14.5px;
+    display: flex;
+    align-items: center;
+
+    >div {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &__input {
+    grid-area: input;
+  }
+
+  &__delete {
+    position: relative;
+    top: 4px;
+    grid-area: delete;
+  }
+}

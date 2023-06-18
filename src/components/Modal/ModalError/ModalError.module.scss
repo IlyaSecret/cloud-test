@@ -1,0 +1,47 @@
+.modal {
+  &__error {
+    display: grid;
+
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title close"
+      "error error"
+      ". button";
+    row-gap: 22px;
+  }
+
+  &__title {
+    grid-area: title;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: hsla(0, 0%, 20%, 1);
+  }
+
+  &__closeIcon {
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, 0.04);
+    width: 28px;
+    height: 28px;
+    padding: 8px;
+    justify-self: end;
+    align-self: center;
+    grid-area: close;
+  }
+
+  &__errorIcon {
+    border-radius: 50%;
+    border: hsla(356, 77%, 61%, 0.15) solid 20px;
+    justify-self: center;
+
+    margin: 26px auto;
+    grid-area: error;
+  }
+
+  &__button {
+    grid-area: button;
+    justify-self: end;
+  }
+}

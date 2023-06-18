@@ -1,0 +1,20 @@
+@mixin inputStyles {
+  &__input {
+    padding: 1.2rem;
+    background: #FFFFFF;
+    color: hsla(0, 0%, 0%, 0.48);
+    border: 1px solid hsla(0, 0%, 0%, 0.16);
+    border-radius: 4px;
+    width: clamp(20rem, 100%, 30rem);
+    margin-top: 0.8rem;
+
+    &_l {
+      width: clamp(20rem, 100%, 40rem);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: hsla(239, 94%, 66%, 1);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use "./../../utils/_inputStyles" as mix;
+
+.form2 {
+  @include mix.inputStyles;
+
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-template-rows: repeat(3, min-content) 8.8rem;
+  grid-template-areas:
+    "advantages ."
+    "checkbox ."
+    "radio ."
+    "button_back button_next";
+  justify-content: start;
+  gap: 2rem;
+
+  &__advantages {
+    grid-area: advantages;
+  }
+
+  &__checkbox {
+    grid-area: checkbox;
+  }
+
+  &__radio {
+    grid-area: radio;
+  }
+
+  &__button {
+    &_back {
+      align-self: end;
+      grid-area: button_back;
+    }
+
+    &_next {
+      align-self: end;
+      justify-self: end;
+      grid-area: button_next;
+    }
+  }
+}

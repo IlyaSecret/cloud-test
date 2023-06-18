@@ -1,0 +1,5 @@
+@use "./../../utils/_inputStyles" as mix;
+
+.input {
+  @include mix.inputStyles;
+}

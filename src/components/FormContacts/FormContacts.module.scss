@@ -1,0 +1,46 @@
+@use "./../../utils/_inputStyles" as mix;
+
+.form1 {
+  @include mix.inputStyles;
+
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-template-rows: repeat(3, min-content) 14.5rem min-content;
+  grid-template-areas:
+    "nickname ."
+    "name ."
+    "surname ."
+    "sex ."
+    "button_back button_next";
+  justify-content: start;
+  gap: 2rem;
+
+  &__nickname {
+    grid-area: nickname;
+  }
+
+  &__surname {
+    grid-area: surname;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__sex {
+    grid-area: sex;
+  }
+
+  &__button {
+    &_back {
+      align-self: end;
+      grid-area: button_back;
+    }
+
+    &_next {
+      align-self: end;
+      justify-self: end;
+      grid-area: button_next;
+    }
+  }
+}

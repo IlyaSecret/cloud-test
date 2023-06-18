@@ -1,0 +1,79 @@
+.select {
+  position: relative;
+
+  &__container {
+    overflow: hidden;
+    width: clamp(20rem, 100%, 30rem);
+
+    margin-top: 0.8rem;
+    position: absolute;
+    height: 4.4rem;
+    cursor: pointer;
+    white-space: nowrap;
+
+    background: hsla(0, 0%, 100%, 1);
+    color: hsla(0, 0%, 0%, 0.48);
+    border: 1px solid hsla(0, 0%, 0%, 0.16);
+    border-radius: 4px;
+    outline: none;
+
+    transition: 0.3s all ease-in-out;
+
+    &_expanded {
+      border: .06em solid hsla(239, 94%, 66%, 1);
+      height: fit-content;
+      overflow: visible;
+
+      >.select__optionsContainer {
+        visibility: visible;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      >.select__checked::after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__option {
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.01;
+  }
+
+  &__label {
+    height: 4.4rem;
+    padding: 1.2rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__checked {
+    height: 4.4rem;
+    padding: 1.2rem;
+    display: grid;
+    grid-template-columns: 11.4fr 1fr;
+    gap: 1.2rem;
+    align-items: center;
+
+    &::after {
+      content: "";
+      margin: 0.55rem;
+      display: inline-block;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.24);
+      border-right: 1px solid hsla(0, 0%, 0%, 0.24);
+      transform: rotate(45deg);
+      transition: .4s all ease-in-out;
+    }
+  }
+
+  &__optionsContainer {
+    visibility: hidden;
+    display: grid;
+    gap: 0.4rem
+  }
+}
